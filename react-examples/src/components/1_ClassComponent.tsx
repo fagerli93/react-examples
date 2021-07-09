@@ -7,7 +7,7 @@ interface State {
 
 interface Props {}
 
-export class HelloClass extends React.Component<{}, State> {
+export class ClassComponent extends React.Component<{}, State> {
   constructor(props: Props) {
     super(props);
     // 1

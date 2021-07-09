@@ -1,19 +1,24 @@
 import React, { useEffect, useState } from "react";
 
-const HelloFunctional: React.FC = () => {
+const FunctionalComponent: React.FC = () => {
   const [navn, setName] = useState("Simon");
   const [clicks, setClicks] = useState(0);
 
   useEffect(() => {
     // 1
+    console.log("Hallo");
 
     return () => {
       // 2
     };
   }, []);
 
+  useEffect(() => {
+    console.log("Hallo2");
+  }, [navn]);
+
   const handleClick = () => {
-    setClicks((prevState) => (prevState += 1));
+    setClicks((prevState) => prevState + 1);
   };
 
   return (
@@ -25,4 +30,4 @@ const HelloFunctional: React.FC = () => {
     </div>
   );
 };
-export default HelloFunctional;
+export default FunctionalComponent;
